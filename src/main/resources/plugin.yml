@@ -1,0 +1,4 @@
+name: TiStars
+version: ${project.version}
+main: io.github.lamzier.tistars.TiStars
+api-version: 1.17
