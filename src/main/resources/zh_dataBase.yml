@@ -1,0 +1,15 @@
+# MYSQL数据库设置，如果开启请在config.yml的enable_MYSQL选项中填true
+# 插件版本号(请勿修改)
+version: 1.0
+# MYSQL数据库IP
+MysqlIp: '127.0.0.1'
+# 数据库名
+MysqlRoot: 'TiStars'
+# 数据库用户名
+MysqlUsername: 'TiStars'
+# 数据库密码
+MysqlPassword: '123456789'
+# 数据库端口
+MysqlPort: '3366'
+# 数据库表
+MysqlTable: 'TiStars'

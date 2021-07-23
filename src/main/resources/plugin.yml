@@ -2,4 +2,6 @@ name: TiStars
 version: ${project.version}
 main: io.github.lamzier.tistars.TiStars
 api-version: 1.17
-
+commands:
+  tistars:
+    description: 'TiStars 指令帮助集合'

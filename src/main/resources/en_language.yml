@@ -1,0 +1,5 @@
+# Plug-in version (Please do not modify)
+version: 1.0
+# Language prompts are stored here
+# Plug-in finished loading
+onEnable_finish: 'Plug-in finished loading！/r/n Author：Lamzy/r/n Contact：QQ1255461704/r/n QQgroup：805410341'

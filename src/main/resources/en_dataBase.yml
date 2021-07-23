@@ -1,0 +1,15 @@
+# MYSQL database setting, if it is turned on, please fill true in the enable_MYSQL option of config.yml
+# Plug-in version (Please do not modify)
+version: 1.0
+# MYSQL database IP
+MysqlIp: '127.0.0.1'
+# Database name
+MysqlRoot: 'TiStars'
+# database user name
+MysqlUsername: 'TiStars'
+# Database password
+MysqlPassword: '123456789'
+# Database port
+MysqlPort: '3366'
+# Database table
+MysqlTable: 'TiStars'

@@ -1,0 +1,6 @@
+# Plug-in version (Please do not modify)
+version: 1.0
+# Plug-in language（zh ： Chinese ； en ： Engilsh）
+language: zh
+# Whether to use MYSQL database, if not, use yaml for local storage
+enable_MYSQL: false

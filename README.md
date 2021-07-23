@@ -35,8 +35,12 @@ TiStars 插件受到UltiTools插件启发，因此此插件的功能与UltiTools
 
 组长：Lamzy
 
+负责人：Nica
+
 组员：暂无
 
 # 联系方式
 
 组长：QQ1255461704
+
+负责人：QQ76******9
