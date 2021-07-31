@@ -96,7 +96,7 @@ public class papi extends PlaceholderExpansion {
                     Map<Object , Object> play = yml.load(data2.get(name).toString()
                         .replace("=" , ": "));
                     //获取play
-                    double p = (double)((int)play.get("spirit") * 10000 / (int)reconfig.configAll[2].get("spirit"));
+                    double p = (double)((int)play.get("spirit") * 100 / (int)reconfig.configAll[2].get("spirit"));
                     return p/100 + "%";
                     //返回精神百分比
                 }else {
