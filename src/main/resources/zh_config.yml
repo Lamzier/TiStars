@@ -1,6 +1,0 @@
-# 插件版本号(请勿修改)
-version: 1.0
-# 插件语言（zh ： 中文 ； en ： Engilsh）
-language: zh
-# 是否使用MYSQL数据库，如果否则使用yaml进行本地存储
-enable_MYSQL: false
