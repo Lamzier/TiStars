@@ -97,7 +97,7 @@ public class papi extends PlaceholderExpansion {
                         .replace("=" , ": "));
                     //获取play
                     double p = (double)((int)play.get("spirit") * 100 / (int)reconfig.configAll[2].get("spirit"));
-                    return p/100 + "%";
+                    return p/100 + " %";
                     //返回精神百分比
                 }else {
                     //没开启
