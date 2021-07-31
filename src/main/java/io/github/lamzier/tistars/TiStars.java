@@ -1,12 +1,8 @@
 package io.github.lamzier.tistars;
 
-import config.readWrite;
-import config.reconfig;
-import mysql.mysql;
-import storage.storage;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
-
+import start.reconfig;
 
 public final class TiStars extends JavaPlugin {
 
@@ -18,29 +14,38 @@ public final class TiStars extends JavaPlugin {
     public void onEnable() {
         // 插件载入
         plugin = this;
-        //实例化 plugin
-        getServer().getConsoleSender().sendMessage(ChatColor.GREEN
-                + "[" + plugin.getName() + "]" + "Plug-in starts loading!");
-        //向后台发送消息
-        reconfig.reload();
-        //读入配置文件
+        //实例化plugin
+        getServer().getConsoleSender().sendMessage(
+                ChatColor.GREEN + "[" + plugin.getName() + "]" +
+                        "Plug-in starts loading!"
+        );
+        //向后台发送提示语
+        reconfig.reconfig();
+        //执行读取配置文件
+        addCommand.add();
+        //调用添加指令函数
+        //注册事件↓↓↓
+        //getServer().getPluginManager().registerEvents(new spirit.sleepOn() , this);
+        //getServer().getPluginManager().registerEvents(new spirit.sleepOff() , this);
+        //getServer().getPluginManager().registerEvents(new spirit.inServer() , this);
+        //注册事件↑↑↑
+        if ((boolean)reconfig.configAll[0].get("player_spirit")){
+            //如果开启玩家精神值
+            spirit.start.star();
+            //启动开启函数
+            getServer().getPluginManager().registerEvents(new spirit.sleepOn() , this);
+            getServer().getPluginManager().registerEvents(new spirit.sleepOff() , this);
+            getServer().getPluginManager().registerEvents(new spirit.inServer() , this);
+            //注册事件
+        }
+        new papi().register();
+        //注册papi
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN
                 + "[" + plugin.getName() + "]" +
-                reconfig.objectLanguage.get("onEnable_finish").toString()
-                        .replaceAll("/n","\n")
-                        .replaceAll("/r" , "\r")
+                reconfig.configAll[1].get("onEnable_finish").toString()
+                .replace("/r" , "\r").replace("/n" , "\n")
         );
-        //向后台发送完成插件语句
-        addCommand.addCommand();
-        //调用添加指令函数
-        readWrite.checkData("playerData");
-        //玩家数据检查
-
-
-
-
-
-
+        //向后台发送提示语
     }
 
     /**
@@ -58,7 +63,17 @@ public final class TiStars extends JavaPlugin {
     @Override
     public void onDisable() {
         // 插件卸载
+        if ((boolean)reconfig.configAll[0].get("player_spirit")){
+            //如果开启了精神值操作，保存文件
+            spirit.start.writeFile();
+        }
 
+        getServer().getConsoleSender().sendMessage(ChatColor.GREEN
+                + "[" + plugin.getName() + "]" +
+                reconfig.configAll[1].get("offEnable_finish").toString()
+                        .replace("/r" , "\r").replace("/n" , "\n")
+        );
+        //通知后台
     }
 
 

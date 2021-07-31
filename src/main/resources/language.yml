@@ -1,0 +1,38 @@
+zh_Notes001: 插件版本号(请勿修改)，此处存放语言文件
+en_Notes001: Plug-in version number (do not modify), where language files are stored
+al_version: 1.00
+zh_Notes002: 这里存放语言提示语,当前语言文件版本(请勿修改)
+en_Notes002: Here is the language prompt, the current language file version (please do not modify)
+al_language: $language
+zh_Notes003: 插件语言选定
+en_Notes003: Plugin language selection
+zh_onEnable_language: 您当前使用了中文简体
+en_onEnable_language: You are currently using English
+zh_Notes004: 插件完成加载时
+en_Notes004: When the plug-in finishes loading
+zh_onEnable_finish: 插件加载完成!/r/n 作者:Lamzy/r/n 联系方式:QQ1255461704/r/n 交流Q群:805410341
+en_onEnable_finish: Plug-in loading completed!/r/n Author:Lamzy/r/n Contact information:QQ1255461704/r/n Ac q group:805410341
+zh_Notes005: 重置插件时
+en_Notes005: When reload plug-in
+zh_reload: 已经完成重置插件!
+en_reload: Reload plug-in has been completed!
+zh_Notes006: 未知指令
+en_Notes006: Unknown instruction
+zh_unknownCommand: 未知指令
+en_unknownCommand: Unknown instruction
+zh_Notes007: 玩家输入帮助指令
+en_Notes007: Players input help instructions
+zh_help: 欢迎使用[Tistars]插件！tistars reload 重置插件
+en_help: Welcome to the [Tistars] plugin! Tistars reload reset plug-in
+zh_Notes008: 玩家没精神的时候会说
+en_Notes008: Players will say when they are out of spirits
+zh_interest_spirit:
+  - §c好困，好久没睡觉了......
+  - §c我想睡觉......
+en_interest_spirit:
+  - §cI'm so sleepy, I haven't slept for a long time......
+  - §cI want to sleep......
+zh_Notes009: 完成关闭插件时
+en_Notes009: When you finish closing the plug-in
+zh_offEnable_finish: 插件已经完成完毕!
+en_offEnable_finish: Plug-in has been completed!

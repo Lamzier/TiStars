@@ -1,0 +1,6 @@
+Notes001: 插件版本号(请勿修改),玩家精神值配置
+version: 1.00
+Notes002: 最高精神状态
+spirit: 240
+Notes003: 一分钟精神恢复值
+recoverySpirit: 48

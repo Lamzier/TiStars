@@ -1,0 +1,11 @@
+Notes001: 插件版本号(请勿修改)
+version: 1.00
+Notes002: 以下存放玩家信息
+data:
+#玩家数据
+  Lamzy:
+  #Lamzy的数据
+    sleeping: false
+    #玩家是否在睡眠
+    spirit: 0
+    #玩家精神状态

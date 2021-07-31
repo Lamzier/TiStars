@@ -1,0 +1,8 @@
+Notes001: 插件版本号(请勿修改)
+version: 1.00
+Notes002: 插件语言（zh ： 中文 ； en ： Engilsh）
+language: zh
+Notes003: 是否开启玩家挖掘疲劳值
+player_digVigour: true
+Notes004: 是否开启玩家精神值
+player_spirit: true
