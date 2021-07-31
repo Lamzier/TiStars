@@ -14,6 +14,7 @@ public class extendedFile {
      * 扩展文件夹
      */
     public static void folder(){
+        reconfig.checkFolder("");
         reconfig.checkFolder("playerData");
     }
 
@@ -31,7 +32,7 @@ public class extendedFile {
     public static void ymlRead(){
         try {
             reconfig.configAll[2] = reconfig.getYml().load(new FileReader(TiStars.getPlugin().getDataFolder() + //文件目录 plugins\TiStars
-                    "\\spirit.yml"));
+                    "/spirit.yml"));
             //读取spirit配置文件
 
         } catch (FileNotFoundException e) {

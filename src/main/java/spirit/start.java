@@ -143,7 +143,7 @@ public class start {
         try {
             reconfig.getYml().dump(data , new FileWriter(
                     TiStars.getInstance().getDataFolder()
-                    + "\\playerData\\spiritData.yml"));
+                    + "/playerData/spiritData.yml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

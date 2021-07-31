@@ -54,7 +54,7 @@ public class reconfig {
             //读取jar config文件
             Double version = (Double)jarMap.get("version");
             File file = new File(TiStars.getPlugin().getDataFolder() + //文件目录 plugins\TiStars
-                    "\\config.yml");
+                    "/config.yml");
             Map<Object , Object> map = null;
             if (file.exists()){
                 //如果文件存在
@@ -89,7 +89,7 @@ public class reconfig {
         try {
             configAll[0] = yml.load(new FileReader(
                     TiStars.getPlugin().getDataFolder() + //文件目录 plugins\TiStars
-                            "\\config.yml"
+                            "/config.yml"
             ));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -105,13 +105,13 @@ public class reconfig {
             Double version = (Double)jarMap.get("al_version");
             //获取官方版本
             File file = new File (TiStars.getPlugin().getDataFolder() + //文件目录 plugins\TiStars
-                    "\\language.yml");
+                    "/language.yml");
             Map<Object , Object> locMap = null;
             if (file.exists()){
                 //如果文件存在
                 locMap = yml.load(new FileReader(
                         TiStars.getPlugin().getDataFolder() + //文件目录 plugins\TiStars
-                                "\\language.yml"
+                                "/language.yml"
                 ));
             }
             //读取本地 language
@@ -129,7 +129,7 @@ public class reconfig {
                 map.put("language" , language);
                 try {
                     yml.dump(map , new FileWriter(TiStars.getPlugin().getDataFolder() +
-                            "\\language.yml"));
+                            "/language.yml"));
                 } catch (IOException e) {
                     e.printStackTrace();
                     return false;
@@ -137,7 +137,7 @@ public class reconfig {
                 //写入文件
             }//完成language检查
             configAll[1] = yml.load(new FileReader(TiStars.getPlugin().getDataFolder() +
-                    "\\language.yml"));
+                    "/language.yml"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -163,7 +163,7 @@ public class reconfig {
      * @param path 路径 例如 playerData 或 playerData/Spirit
      */
     public static void checkFolder(String path){
-        File file = new File(TiStars.getPlugin().getDataFolder() + "\\" + path);
+        File file = new File(TiStars.getPlugin().getDataFolder() + "/" + path);
         if (!file.exists()){
             //如果不存在则新建
             if (file.mkdirs()){
@@ -193,7 +193,7 @@ public class reconfig {
         Double version = (Double)jarMap.get("version");
         //获得官方版本
         try {
-            File file = new File(plugin.getDataFolder() + "\\" + path);
+            File file = new File(plugin.getDataFolder() + "/" + path);
             Map<Object ,Object> locMap = null;
             if (file.exists()){
                 //如果文件存在
