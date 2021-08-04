@@ -24,20 +24,28 @@ public class tistars implements CommandExecutor {
         if (args.length == 0){
             //只输入了 tistars
             sender.sendMessage(ChatColor.GREEN + map.get("help").toString());
-        }else if (args.length == 1){
+        }else {
             //输入了 tistars ***
             switch (args[0]){
                 case "reload":
-                    reconfig.reconfig();
-                    sender.sendMessage(ChatColor.GREEN + map.get("reload").toString());
+                    if (sender.hasPermission("tistars.admin")){
+                        //玩家有权限
+                        reconfig.reconfig();
+                        sender.sendMessage(ChatColor.GREEN + map.get("reload").toString());
+                    }else {
+                        sender.sendMessage(map.get("permissions_without").toString() +
+                                "tistars.admin");
+                    }
+                    break;
+                case "dareroom":
+                    dareRoom.commands.command(sender, command, label, args);
+                    //执行函数
                     break;
                 default:
                     sender.sendMessage(ChatColor.RED + map.get("unknownCommand").toString());
                     break;
             }
 
-        }else{
-            sender.sendMessage(ChatColor.RED + map.get("unknownCommand").toString());
         }
         return false;
     }
