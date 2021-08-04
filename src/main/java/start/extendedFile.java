@@ -24,6 +24,8 @@ public class extendedFile {
     public static void Yaml(){
         reconfig.checkYaml("dataBase.yml");
         reconfig.checkYaml("spirit.yml");
+        reconfig.checkYaml("pro.yml");
+        reconfig.checkYaml("dareRoom.yml");
     }
 
     /**
@@ -34,6 +36,12 @@ public class extendedFile {
             reconfig.configAll[2] = reconfig.getYml().load(new FileReader(TiStars.getPlugin().getDataFolder() + //文件目录 plugins\TiStars
                     "/spirit.yml"));
             //读取spirit配置文件
+            reconfig.configAll[3] = reconfig.getYml().load(new FileReader(TiStars.getPlugin().getDataFolder() + //文件目录 plugins\TiStars
+                    "/pro.yml"));
+            //读取pro配置文件
+            reconfig.configAll[4] = reconfig.getYml().load(new FileReader(TiStars.getPlugin().getDataFolder() + //文件目录 plugins\TiStars
+                    "/dareRoom.yml"));
+            //读取pro配置文件
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

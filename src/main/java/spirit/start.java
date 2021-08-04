@@ -105,7 +105,6 @@ public class start {
                                     });
                                     //给予效果
                                     //告诉玩家
-                                    System.out.println(reconfig.configAll[1].get("interest_spirit"));
                                     List<String> msg = (List<String>) reconfig.configAll[1].get("interest_spirit");
                                     int index = (int)(Math.random()* msg.size());
                                     ee.sendMessage(msg.get(index));

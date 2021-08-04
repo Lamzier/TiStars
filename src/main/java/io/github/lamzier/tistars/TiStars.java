@@ -24,6 +24,16 @@ public final class TiStars extends JavaPlugin {
         //执行读取配置文件
         addCommand.add();
         //调用添加指令函数
+        if ((boolean)reconfig.configAll[0].get("pro")){
+            //开启了pro版本验证
+            pro.start.star();
+            //进行pro版本验证
+        }else {
+            //没开启pro版本验证
+            getServer().getConsoleSender().sendMessage(ChatColor.GREEN
+                    + "[" + plugin.getName() + "]" +
+                    reconfig.configAll[1].get("offPro").toString());
+        }
         //注册事件↓↓↓
         //getServer().getPluginManager().registerEvents(new spirit.sleepOn() , this);
         //getServer().getPluginManager().registerEvents(new spirit.sleepOff() , this);
@@ -37,6 +47,17 @@ public final class TiStars extends JavaPlugin {
             getServer().getPluginManager().registerEvents(new spirit.sleepOff() , this);
             getServer().getPluginManager().registerEvents(new spirit.inServer() , this);
             //注册事件
+        }
+        if ((boolean)reconfig.configAll[0].get("dareRoom")){
+            //如果开启副本房间
+            if (dareRoom.start.star()){
+                //如果开启成功
+                getServer().getPluginManager().registerEvents(new dareRoom.teleport() , this);
+                getServer().getPluginManager().registerEvents(new dareRoom.outServer() , this);
+                getServer().getPluginManager().registerEvents(new dareRoom.respawn() , this);
+                getServer().getPluginManager().registerEvents(new dareRoom.move() , this);
+                //注册事件
+            }
         }
         new papi().register();
         //注册papi

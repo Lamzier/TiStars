@@ -22,8 +22,10 @@ public class reconfig {
      * 0 --- config.yml
      * 1 --- language.yml
      * 2 --- spirit.yml
+     * 3 --- pro.yml
+     * 4 --- dareRoom.yml
      */
-    public static Map[] configAll = new Map[3];
+    public static Map[] configAll = new Map[5];
     //读取到的配置文件
     private static Yaml yml = new Yaml();
 

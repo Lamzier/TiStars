@@ -1,0 +1,29 @@
+Notes001: 插件版本号(请勿修改)
+version: 1.03
+Notes002: 副本房间开启时间(单位：秒 , -1 则为不关闭房间 , 直到玩家全部离开)
+time: -1
+Notes003: 是否等待其他玩家(秒),-1则不等待
+waitTime: -1
+Notes004: 每间房间最多容纳多少人
+playerMax: 10
+Notes005: 每间房间拥有多少名玩家时准备开始游戏
+playerMin: 5
+Notes006: 达到最少玩家数时等待多少秒后开启游戏
+playerWaitTime: 30
+Notes007: 开始游戏后等待多少秒才给玩家移动(-1则不等待)
+starWaitTime: 3
+Notes008: 副本房间返回大厅坐标(world 是世界名)
+data:
+  name: world
+  x: 0
+  y: 65
+  z: 0
+Notes009: 副本房间世界出生点坐标数据 (example_world 是世界名)
+world:
+  example_world:
+    - x: 0
+      y: 65
+      z: 0
+    - x: 100
+      y: 100
+      z: 65

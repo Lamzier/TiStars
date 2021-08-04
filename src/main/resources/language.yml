@@ -1,6 +1,6 @@
 zh_Notes001: 插件版本号(请勿修改)，此处存放语言文件
 en_Notes001: Plug-in version number (do not modify), where language files are stored
-al_version: 1.00
+al_version: 1.12
 zh_Notes002: 这里存放语言提示语,当前语言文件版本(请勿修改)
 en_Notes002: Here is the language prompt, the current language file version (please do not modify)
 al_language: $language
@@ -36,3 +36,95 @@ zh_Notes009: 完成关闭插件时
 en_Notes009: When you finish closing the plug-in
 zh_offEnable_finish: 插件已经完成完毕!
 en_offEnable_finish: Plug-in has been completed!
+zh_Notes010: 没开启pro版本验证时
+en_Notes010: When pro version verification is not turned on
+zh_offPro: 当前没开启pro版本验证!
+en_offPro: Pro version verification is not enabled at present!
+zh_Notes011: pro验证失败
+en_Notes011: Pro authentication failed
+zh_onPro_failed: pro密匙验证失败!
+en_onPro_failed: pro密匙验证失败!
+zh_Notes012: pro验证成功
+en_Notes012: Pro verified successfully
+zh_onPro_success: pro密匙验证成功!
+en_onPro_success: Pro key verified successfully!
+zh_Notes013: 副本房间开启失败时
+en_Notes013: When the copy room fails to open
+zh_dareRoom_failed: 副本房间功能开启失败!
+en_dareRoom_failed: Failed to open the copy room function!
+zh_Notes014: dareRoom功能找不到世界
+en_Notes014: DareRoom function cannot find the world
+zh_dareRoom_notFindWorld: DareRoom功能开启失败!原因 找不到该世界-
+en_dareRoom_notFindWorld: DareRoom function failed to open! Reason the world can't be found-
+zh_Notes015: 玩家输入 tistars dareroom
+en_Notes015: Player input tistars dareroom
+zh_dareRoom_help: tistars dareroom join {玩家名称}/n使玩家匹配加入一个副本房间 , 玩家名称忽略则自己/ntistars dareroom leave {玩家名称}/n使得玩家离开一个副本房间，玩家名称忽略则自己
+en_dareRoom_help: tistars dareroom join {Player name}/nMatch players to join a copy room , If the player name is ignored, he will be himself/ntistars dareroom leave {Player name}/nMake the player leave a copy room，If the player name is ignored, he will be himself
+zh_Notes016: 玩家没有权限
+en_Notes016: Player does not have permission
+zh_permissions_without: §c您没有权限 -
+en_permissions_without: §cYou do not have permission -
+zh_Notes017: dareRoom 功能没有空余房间时
+en_Notes017: When the dareRoom function has no spare room
+zh_dareRoom_notRoom: 抱歉!当前没有空余房间,请稍后重试!
+en_dareRoom_notRoom: Sorry! There is no spare room at present, please try again later!
+zh_Notes018: 当前玩家已经加入房间
+en_Notes018: The current player has joined the room
+zh_dareRoom_inRoom: 您当前已经加入房间!
+en_dareRoom_inRoom: You have joined the room at present!
+zh_Notes019: 房间正在等待开启
+en_Notes019: The room is waiting to open
+zh_dareRoom_waitRoom: 距离开启还差 $time 秒
+en_dareRoom_waitRoom: $time s before opening
+zh_Notes020: 有玩家加入时，当前人数状况
+en_Notes020: Current number of players joining
+zh_dareRoom_nowPlayer: $player 加入房间 , 当前人数 $now , 游戏开启需要人数 $min , 游戏最大人数 $max
+en_dareRoom_nowPlayer: $player joins the room, the current number of people is $now, the number of people needed to start the game is $min, and the maximum number of people in the game is $max
+zh_Notes021: dareroom 玩家退出房间成功
+en_Notes021: Dareroom player exits the room successfully
+zh_dareRoom_leaveRoom_success: $player 退出了房间!
+en_dareRoom_leaveRoom_success: $player quit the room!
+zh_Notes022: dareroom 玩家退出房间失败
+en_Notes022: Dareroom player failed to exit the room
+zh_dareRoom_leaveRoom_failed: $player 退出房间失败!原因-
+en_dareRoom_leaveRoom_failed: $player failed to exit the room! Cause-
+zh_Notes023: dareroom 玩家进入副本房间
+en_Notes023: Dareroom players enter the dungeon room
+zh_dareRoom_starGame: 游戏!开始!
+en_dareRoom_starGame: game! Start!
+zh_Notes024: dareroom 玩家正在游戏中输入指令
+en_Notes024: Dareroom players are entering instructions in the game
+zh_dareRoom_playerPlaying: 您当前正在副本房间!禁用指令!
+en_dareRoom_playerPlaying: You are currently copying rooms! Disable command!
+zh_Notes025: dareroom 玩家想非法进入副本世界
+en_Notes025: Dareroom players want to illegally enter the replica world
+zh_dareRoom_errInWorld: 凡人!休想扰乱副本之争!
+en_dareRoom_errInWorld: Mortal! Don't disturb the copy dispute!
+zh_Notes026: dareroom 玩家想非法出去副本世界!
+en_Notes026: Dareroom players want to go out of the replica world illegally!
+zh_dareRoom_errOutWorld: 副本之争正在进行中!无法离开!
+en_dareRoom_errOutWorld: The copy dispute is in progress! Can't leave!
+zh_Notes027: dareroom 副本房间时间到了
+en_Notes027: It's time for the dareroom replica room
+zh_dareRoom_timeOut: 副本之争时间已到!已把你安全送往出生点!
+en_dareRoom_timeOut: It's time to compete for copies! You have been safely sent to the birth point!
+zh_Notes028: dareroom 管理员跨副本传送
+en_Notes028: Dareroom administrator cross replica delivery
+zh_dareRoom_adminTp: 您使用了权限夸副本地图传送!
+en_dareRoom_adminTp: You have used permission to copy map transfer!
+zh_Notes029: dareroom 副本之争结束!
+en_Notes029: The dispute over the copy of dareroom is over!
+zh_dareRoom_endGame: 您的副本之争结束!
+en_dareRoom_endGame: Your copy dispute is over!
+zh_Notes030: dareroom 副本世界多了空余房间时
+en_Notes030: When there are more spare rooms in the world of dareroom
+zh_dareRoom_spare: 世界 $world 副本之争空闲!
+en_dareRoom_spare: World $world copy dispute free!
+zh_Notes031: dareroom 等待其他玩家时
+en_Notes031: Dareroom is waiting for other players
+zh_dareroom_waitPlayer: 请耐心等待其他玩家加载!
+en_dareroom_waitPlayer: Please wait patiently for other players to load!
+zh_Notes032: dareroom 结束等待其他玩家时
+en_Notes032: When dareroom ends waiting for other players
+zh_dareroom_endWaitPlayer: 所有玩家加载完毕!/n请开始您的表演!
+en_dareroom_endWaitPlayer: All players loaded/nplease start your performance!
