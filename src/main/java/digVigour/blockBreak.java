@@ -9,6 +9,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.scheduler.BukkitRunnable;
 import java.util.Map;
+import start.reconfig;
 
 public class blockBreak implements Listener {
 
@@ -63,6 +64,11 @@ public class blockBreak implements Listener {
                         tired = true;
                     }else if (finalVigour <= maxVigour * 0.5 && Math.random() <= 0.5){
                         tired = true;
+                    }
+                    if (ee.getPlayer().hasPermission("tistars.admin")){
+                        tired = false;
+                        ee.getPlayer().sendMessage(reconfig.configAll[1].get("digVigour_admin")
+                                .toString() + "tistars.admin");
                     }
                     if (!tired) return;
                     //如果不中，可以滚了

@@ -1,6 +1,6 @@
 zh_Notes001: 插件版本号(请勿修改)，此处存放语言文件
 en_Notes001: Plug-in version number (do not modify), where language files are stored
-al_version: 1.13
+al_version: 1.14
 zh_Notes002: 这里存放语言提示语,当前语言文件版本(请勿修改)
 en_Notes002: Here is the language prompt, the current language file version (please do not modify)
 al_language: $language
@@ -24,7 +24,7 @@ zh_Notes007: 玩家输入帮助指令
 en_Notes007: Players input help instructions
 zh_help: 欢迎使用[Tistars]插件！tistars reload 重置插件
 en_help: Welcome to the [Tistars] plugin! Tistars reload reset plug-in
-zh_Notes008: 玩家没精神的时候会说
+zh_Notes008: spirit 玩家没精神的时候会说
 en_Notes008: Players will say when they are out of spirits
 zh_interest_spirit:
   - §c好困，好久没睡觉了......
@@ -32,6 +32,10 @@ zh_interest_spirit:
 en_interest_spirit:
   - §cI'm so sleepy, I haven't slept for a long time......
   - §cI want to sleep......
+zh_Notes034: spirit 使用管理员权限
+en_Notes034: Spirit uses administrator privileges
+zh_spirit_admin: 您使用了权限,免疫了负面buff-
+en_spirit_admin: You have used permissions and are immune to negative buffs-
 zh_Notes009: 完成关闭插件时
 en_Notes009: When you finish closing the plug-in
 zh_offEnable_finish: 插件已经完成完毕!
@@ -131,8 +135,12 @@ en_dareroom_endWaitPlayer: All players loaded/nplease start your performance!
 zh_Notes033: digvigour 疲劳提示语
 en_Notes033: Digvigour fatigue tips
 zh_digvigour_msg:
-  - 好累啊!手都麻痹了!
-  - 我需要休息!!!!!!
+  - §c好累啊!手都麻痹了!
+  - §c我需要休息!!!!!!
 en_digbigour_msg:
-  - So tired! My hands are paralyzed!
-  - I need a break!!!!!!
+  - §cSo tired! My hands are paralyzed!
+  - §cI need a break!!!!!!
+zh_Notes035: digbigour 使用管理员权限
+en_Notes035: Digbigour uses administrator privileges
+zh_digVigour_admin: 您使用了权限,无视负面buff-
+en_digVigour_admin: You used permission, ignoring the negative buff-

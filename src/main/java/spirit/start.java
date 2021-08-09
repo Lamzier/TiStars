@@ -15,6 +15,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * 玩家精神值启动程序
@@ -98,17 +99,24 @@ public class start {
                                     Player ee = plugin.getServer().getPlayerExact(name);
                                     //获取玩家类
                                     assert ee != null;
-                                    Bukkit.getScheduler().runTask(TiStars.getPlugin() , ()->{
-                                        //转同步操作
-                                        ee.addPotionEffect(PotionEffect);
-                                        ee.addPotionEffect(PotionEffect2);
-                                    });
-                                    //给予效果
-                                    //告诉玩家
-                                    List<String> msg = (List<String>) reconfig.configAll[1].get("interest_spirit");
-                                    int index = (int)(Math.random()* msg.size());
-                                    ee.sendMessage(msg.get(index));
-                                    //随机发送语句
+                                    if (ee.hasPermission("tistars.admin")){
+                                        //检查是否有管理员权限
+                                        Objects.requireNonNull(ee.getPlayer()).sendMessage(reconfig.configAll[1].get("spirit_admin")
+                                                .toString() + "tistars.admin");
+                                    }else {
+                                        //没有管理员权限
+                                        Bukkit.getScheduler().runTask(TiStars.getPlugin(), () -> {
+                                            //转同步操作
+                                            ee.addPotionEffect(PotionEffect);
+                                            ee.addPotionEffect(PotionEffect2);
+                                        });
+                                        //给予效果
+                                        //告诉玩家
+                                        List<String> msg = (List<String>) reconfig.configAll[1].get("interest_spirit");
+                                        int index = (int) (Math.random() * msg.size());
+                                        ee.sendMessage(msg.get(index));
+                                        //随机发送语句
+                                    }
                                 }
                             }
                         }.runTaskAsynchronously(TiStars.getPlugin());
