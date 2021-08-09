@@ -1,0 +1,9 @@
+Notes001: 插件版本号(请勿修改)
+version: 1.00
+Notes002: 以下存放玩家信息
+data:
+  #玩家数据
+  example:
+    #Lamzy的数据
+    vigour: 0
+    #玩家是活力值

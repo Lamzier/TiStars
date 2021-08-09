@@ -30,7 +30,7 @@ public class start {
     /**
      * 启动程序
      */
-    public static void star(){
+    public static boolean star(){
         Plugin plugin = TiStars.getInstance();
         //获取主类
         reconfig.checkYaml("playerData/spiritData.yml");
@@ -42,7 +42,7 @@ public class start {
                     + "/playerData/spiritData.yml"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            return;
+            return false;
         }
         //读取变量文件
 
@@ -133,6 +133,7 @@ public class start {
             }
         }.runTaskTimerAsynchronously(TiStars.getPlugin() , 72000, 72000);
         //执行写入本地文件 72000 72000
+        return true;
     }
 
     /**

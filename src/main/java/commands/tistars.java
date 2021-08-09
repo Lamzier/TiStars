@@ -38,7 +38,7 @@ public class tistars implements CommandExecutor {
                     }
                     break;
                 case "dareroom":
-                    dareRoom.commands.command(sender, command, label, args);
+                    dareRoom.commands.command(sender, args);
                     //执行函数
                     break;
                 default:

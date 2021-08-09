@@ -19,17 +19,9 @@ import java.util.Map;
 public class start {
 
     /**
-     * 房间开启时间
-     */
-    private static int time;
-    /**
-     * 等待玩家时间
-     */
-    private static int waitTime;
-    /**
      * 读取的可用副本世界
      */
-    private static List<World> worlds = new ArrayList<>();
+    private static final List<World> worlds = new ArrayList<>();
     /**
      * 读取可用世界数据
      */
@@ -59,8 +51,6 @@ public class start {
             return false;
         }
         //读取世界
-        time = (int)reconfig.configAll[4].get("time");
-        waitTime = (int)reconfig.configAll[4].get("waitTime");
         //获取开启时间
         Yaml yml = reconfig.getYml();
         worldsMap = yml.load(reconfig.configAll[4].get("world").toString()
@@ -108,13 +98,7 @@ public class start {
         return true;
     }
 
-    public static int getTime(){ return time; }
-
-    public static int getWaitTime(){ return  waitTime; }
-
     public static Map<Object , Object> getWorldsMap() { return worldsMap; }
-
-    public static List<World> getWorlds() { return worlds; }
 
     public static boolean getLoad(){ return load; }
 

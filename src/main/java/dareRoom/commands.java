@@ -1,6 +1,5 @@
 package dareRoom;
 
-import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.jetbrains.annotations.NotNull;
 import start.reconfig;
@@ -10,7 +9,7 @@ import start.reconfig;
  */
 public class commands {
 
-    public static void command(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args){
+    public static void command(@NotNull CommandSender sender, @NotNull String[] args){
         if (!start.getLoad()){ return; }
         //判断是否已经开启了该功能
         if (args.length == 1){

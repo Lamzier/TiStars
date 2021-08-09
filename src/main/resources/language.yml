@@ -1,6 +1,6 @@
 zh_Notes001: 插件版本号(请勿修改)，此处存放语言文件
 en_Notes001: Plug-in version number (do not modify), where language files are stored
-al_version: 1.12
+al_version: 1.13
 zh_Notes002: 这里存放语言提示语,当前语言文件版本(请勿修改)
 en_Notes002: Here is the language prompt, the current language file version (please do not modify)
 al_language: $language
@@ -128,3 +128,11 @@ zh_Notes032: dareroom 结束等待其他玩家时
 en_Notes032: When dareroom ends waiting for other players
 zh_dareroom_endWaitPlayer: 所有玩家加载完毕!/n请开始您的表演!
 en_dareroom_endWaitPlayer: All players loaded/nplease start your performance!
+zh_Notes033: digvigour 疲劳提示语
+en_Notes033: Digvigour fatigue tips
+zh_digvigour_msg:
+  - 好累啊!手都麻痹了!
+  - 我需要休息!!!!!!
+en_digbigour_msg:
+  - So tired! My hands are paralyzed!
+  - I need a break!!!!!!

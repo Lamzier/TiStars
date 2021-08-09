@@ -3,6 +3,7 @@ package io.github.lamzier.tistars;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import start.reconfig;
+import digVigour.start;
 
 public final class TiStars extends JavaPlugin {
 
@@ -39,14 +40,17 @@ public final class TiStars extends JavaPlugin {
         //getServer().getPluginManager().registerEvents(new spirit.sleepOff() , this);
         //getServer().getPluginManager().registerEvents(new spirit.inServer() , this);
         //注册事件↑↑↑
+        new papi().register();
+        //注册papi
         if ((boolean)reconfig.configAll[0].get("player_spirit")){
             //如果开启玩家精神值
-            spirit.start.star();
-            //启动开启函数
-            getServer().getPluginManager().registerEvents(new spirit.sleepOn() , this);
-            getServer().getPluginManager().registerEvents(new spirit.sleepOff() , this);
-            getServer().getPluginManager().registerEvents(new spirit.inServer() , this);
-            //注册事件
+            if (spirit.start.star()) {
+                //启动开启函数
+                getServer().getPluginManager().registerEvents(new spirit.sleepOn(), this);
+                getServer().getPluginManager().registerEvents(new spirit.sleepOff(), this);
+                getServer().getPluginManager().registerEvents(new spirit.inServer(), this);
+                //注册事件
+            }
         }
         if ((boolean)reconfig.configAll[0].get("dareRoom")){
             //如果开启副本房间
@@ -59,8 +63,16 @@ public final class TiStars extends JavaPlugin {
                 //注册事件
             }
         }
-        new papi().register();
-        //注册papi
+        if ((boolean)reconfig.configAll[0].get("player_digVigour")){
+            //如果开启了玩家挖掘疲劳
+            if (digVigour.start.star()){
+                //如果开启成功
+                getServer().getPluginManager().registerEvents(new digVigour.inServer() , this);
+                getServer().getPluginManager().registerEvents(new digVigour.blockBreak() , this);
+                //注册事件
+            }
+        }
+
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN
                 + "[" + plugin.getName() + "]" +
                 reconfig.configAll[1].get("onEnable_finish").toString()
@@ -88,7 +100,10 @@ public final class TiStars extends JavaPlugin {
             //如果开启了精神值操作，保存文件
             spirit.start.writeFile();
         }
-
+        if ((boolean)reconfig.configAll[0].get("player_digVigour")){
+            //如果开启了挖掘疲劳
+            digVigour.start.writeFile();
+        }
         getServer().getConsoleSender().sendMessage(ChatColor.GREEN
                 + "[" + plugin.getName() + "]" +
                 reconfig.configAll[1].get("offEnable_finish").toString()

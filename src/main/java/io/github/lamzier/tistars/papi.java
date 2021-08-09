@@ -6,7 +6,6 @@ import org.jetbrains.annotations.NotNull;
 import org.yaml.snakeyaml.Yaml;
 import spirit.start;
 import start.reconfig;
-
 import java.util.Map;
 
 /**
@@ -96,7 +95,7 @@ public class papi extends PlaceholderExpansion {
                     Map<Object , Object> play = yml.load(data2.get(name).toString()
                         .replace("=" , ": "));
                     //获取play
-                    double p = (double)((int)play.get("spirit") * 10000 / (int)reconfig.configAll[2].get("spirit"));
+                    double p = (int)play.get("spirit") * 10000 / (int)reconfig.configAll[2].get("spirit");
                     return p/100 + " %";
                     //返回精神百分比
                 }else {
@@ -105,7 +104,18 @@ public class papi extends PlaceholderExpansion {
                 }
             case "digvigour" :
                 //获取疲劳值
-                break;
+                if ((boolean)reconfig.configAll[0].get("player_digVigour")){
+                    //开启了此功能
+                    Map<Object , Object> p = yml.load(digVigour.start.data2.get(name)
+                            .toString().replace("=" , ": "));
+                    //获取玩家信息
+                    int vigour = (int) p.get("vigour");
+                    double pp = vigour * 10000 / digVigour.start.maxVigour;
+                    return pp/100 + " %";
+                }else {
+                    //没开启
+                    return "-1%";
+                }
             default:
                 break;
         }

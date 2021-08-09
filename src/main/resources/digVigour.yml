@@ -1,0 +1,20 @@
+Notes001: 插件版本号(请勿修改),玩家精神值配置
+version: 1.05
+Notes002: 最高挖掘活力值
+digVigour: 3024
+Notes003: 单次触发挖掘疲劳时间(单位 秒)
+duration: 30
+Notes004: 1分钟所回复的活力值
+recovery: 13
+Notes005: 触发疲劳的方块(后面的数值是扣除多少 , 冒号使用 | 代替 , = 使用 || 代替 , [] 使用 <> 代替)
+block:
+  minecraft|gold_ore: 7
+  minecraft|iron_ore: 3
+  minecraft|coal_ore: 2
+  minecraft|nether_gold_ore: 1
+  minecraft|lapis_ore: 1
+  minecraft|diamond_ore: 10
+  minecraft|redstone_ore<lit||false>: 3
+  minecraft|redstone_ore<lit||true>: 3
+  minecraft|emerald_ore: 1
+  minecraft|nether_quartz_ore: 1
